@@ -1,0 +1,515 @@
+<title>ISA Immo</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="theme-color" content="#1F2A44">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap">
+<style>
+/* Mise en page : en-tête, récapitulatif, onglets vente/location, secteurs, filtres, grille de fiches, annuaire des vendeurs, sites consultés. */
+:root {
+  --ink: #1F2A44;
+  --ink-soft: #5A6480;
+  --surface: #FFFFFF;
+  --surface-2: #F1F3F9;
+  --line: #DFE3EE;
+  --ground: #F6F8F2;
+  --red: #E53935;
+  --new: #1E9E5A;
+  --drop: #D2691E;
+  --on-ink: #FFFFFF;
+  --z-arg: #C62828; --z-aze: #2E7D32; --z-lig: #1E63A8; --on-zone: #FFFFFF;
+  --shadow: 0 6px 18px rgba(31, 42, 68, .10);
+  --f-display: "Fredoka", "Nunito", system-ui, sans-serif;
+  --f-body: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ink: #EEF1F8; --ink-soft: #A5AEC6; --surface: #161D2B; --surface-2: #212A3C; --line: #2E384D;
+    --ground: #10151F; --red: #FF6B6B; --new: #4CC987; --drop: #FFA45C; --on-ink: #161D2B;
+    --z-arg: #FF7B7B; --z-aze: #6BCB77; --z-lig: #6AA8F0; --on-zone: #161D2B;
+    --shadow: 0 6px 18px rgba(0, 0, 0, .45); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --ink: #EEF1F8; --ink-soft: #A5AEC6; --surface: #161D2B; --surface-2: #212A3C; --line: #2E384D;
+  --ground: #10151F; --red: #FF6B6B; --new: #4CC987; --drop: #FFA45C; --on-ink: #161D2B;
+  --z-arg: #FF7B7B; --z-aze: #6BCB77; --z-lig: #6AA8F0; --on-zone: #161D2B;
+  --shadow: 0 6px 18px rgba(0, 0, 0, .45); color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { background: var(--ground); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.45; }
+button, input, select, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--red); outline-offset: 2px; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-block: 14px 40px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+/* en-tête */
+.top { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+.brand { display: flex; align-items: center; gap: 10px; min-width: 0; flex: 1 1 260px; }
+.brand svg { width: 42px; height: 42px; flex: none; }
+.brand h1 { margin: 0; font-family: var(--f-display); font-weight: 700; font-size: clamp(20px, 5.6vw, 26px); line-height: 1.05; letter-spacing: -.01em; }
+.brand h1 span { color: var(--red); }
+.brand p { margin: 3px 0 0; font-size: 13px; color: var(--ink-soft); }
+.maj { font-size: 13px; color: var(--ink-soft); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; }
+.maj-zone { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.maj-etat { flex-basis: 100%; margin: 0; font-size: 14px; background: var(--surface); border-radius: 14px; padding: 10px 14px; box-shadow: var(--shadow); }
+.maj-etat b { font-family: var(--f-display); font-weight: 600; }
+.btn:disabled { opacity: .55; cursor: default; }
+
+/* récapitulatif */
+.recap, .panel { background: var(--surface); border-radius: 20px; padding: 16px; box-shadow: var(--shadow); margin-bottom: 18px; display: grid; gap: 12px; }
+.recap-head { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; }
+.recap h2, .panel h2 { margin: 0; font-family: var(--f-display); font-weight: 600; font-size: 20px; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px; }
+.sel, .input { background: var(--surface-2); border: 2px solid transparent; border-radius: 12px; padding: 7px 10px; min-width: 0; max-width: 100%; }
+.btn { border: 0; border-radius: 12px; padding: 9px 16px; font-weight: 800; cursor: pointer; background: var(--surface-2); }
+.btn.main { background: var(--ink); color: var(--on-ink); }
+.btn.small { padding: 5px 10px; font-size: 13px; }
+.stats { display: flex; flex-wrap: wrap; gap: 8px; }
+.stat { background: var(--surface-2); border-radius: 999px; padding: 6px 12px; font-size: 14px; }
+.stat b { font-family: var(--f-display); font-size: 17px; }
+.since { font-size: 13px; color: var(--ink-soft); align-self: center; }
+.list { list-style: none; margin: 0; padding: 0; max-height: 230px; overflow: auto; border-top: 2px solid var(--surface-2); }
+.list li { display: flex; gap: 8px; align-items: baseline; padding: 7px 0; border-bottom: 2px solid var(--surface-2); font-size: 14px; min-width: 0; }
+.list li > span:last-child { min-width: 0; overflow-wrap: anywhere; }
+.list a { color: inherit; font-weight: 700; }
+.pill { font-size: 11px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px; white-space: nowrap; color: #fff; }
+.pill.new { background: var(--new); } .pill.drop { background: var(--drop); }
+.pill.gone { background: var(--ink-soft); }
+
+/* envoi par e-mail */
+.mail { border-top: 2px solid var(--surface-2); padding-top: 12px; display: grid; gap: 10px; }
+.mail-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.mail label { font-weight: 700; }
+.mail .input { flex: 1 1 220px; }
+.mail textarea { width: 100%; min-height: 140px; background: var(--surface-2); border: 0; border-radius: 12px; padding: 10px; font-size: 13px; resize: vertical; }
+.note { font-size: 13px; color: var(--ink-soft); margin: 0; }
+.msg-ok { color: var(--new); font-weight: 700; }
+.msg-err { color: var(--red); font-weight: 700; }
+a.btn { text-decoration: none; display: inline-block; }
+
+/* onglets et secteurs */
+.tabs { display: flex; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+.tab { flex: 1 1 140px; max-width: 240px; border: 2px solid var(--line); background: var(--surface); border-radius: 16px; padding: 10px 14px; cursor: pointer; text-align: left; }
+.tab b { display: block; font-family: var(--f-display); font-weight: 600; font-size: 18px; }
+.tab span { font-size: 13px; color: var(--ink-soft); }
+.tab[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--on-ink); }
+.tab[aria-pressed="true"] span { color: inherit; opacity: .8; }
+.chips { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+.chip { border: 2px solid var(--line); background: var(--surface); border-radius: 999px; padding: 6px 14px; font-weight: 700; cursor: pointer; }
+.chip[aria-pressed="true"] { border-color: var(--ink); background: var(--ink); color: var(--on-ink); }
+.chip .n { color: var(--ink-soft); font-size: 13px; }
+.chip[aria-pressed="true"] .n { color: inherit; opacity: .85; }
+/* Une couleur par famille de secteurs : Argenton (rouge), Azerables (vert), Liglet (bleu). */
+.z-arg { --z: var(--z-arg); } .z-aze { --z: var(--z-aze); } .z-lig { --z: var(--z-lig); }
+.chip[class*="z-"] { border-color: var(--z); color: var(--z); }
+.chip[class*="z-"] .n { color: inherit; }
+.chip[class*="z-"][aria-pressed="true"] { background: var(--z); border-color: var(--z); color: var(--on-zone); }
+.zones { display: flex; flex-wrap: wrap; gap: 4px; }
+.ztag { font-size: 11px; font-weight: 800; border-radius: 999px; padding: 1px 8px; color: var(--z); background: color-mix(in srgb, var(--z) 12%, var(--surface)); white-space: nowrap; }
+.filters { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; margin-bottom: 16px; }
+.filters label { display: grid; gap: 3px; font-size: 12px; font-weight: 700; color: var(--ink-soft); min-width: 0; }
+.filters .sel, .filters .input { background: var(--surface); border-color: var(--line); color: var(--ink); font-weight: 600; }
+.filters input[type=number] { width: 120px; }
+.filters #f-agence { max-width: 260px; }
+.dpe-filtre { display: grid; gap: 3px; font-size: 12px; font-weight: 700; color: var(--ink-soft); }
+.dpe-filtre .check { padding-bottom: 0; font-size: 12px !important; color: var(--ink-soft) !important; }
+.dpe-lettres { display: flex; gap: 4px; }
+.dpe-lettres .dpe { border: 0; width: 30px; height: 36px; font-size: 14px; cursor: pointer; opacity: .35; }
+.dpe-lettres .dpe[aria-pressed="true"] { opacity: 1; outline: 2px solid var(--ink); outline-offset: 1px; }
+.dpe-lettres:not(:has([aria-pressed="true"])) .dpe { opacity: 1; }
+.check { display: flex !important; align-items: center; gap: 6px; font-size: 14px !important; color: var(--ink) !important; padding-bottom: 9px; }
+.count { font-size: 14px; color: var(--ink-soft); margin: 0 0 10px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+
+/* fiches */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 270px), 1fr)); gap: 16px; }
+.card { background: var(--surface); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; min-width: 0; }
+.ph { position: relative; aspect-ratio: 4 / 3; max-width: 100%; background: var(--surface-2); }
+.ph img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ph .none { position: absolute; inset: 0; display: grid; place-items: center; color: var(--ink-soft); font-size: 13px; }
+.ph .badges { position: absolute; top: 10px; left: 10px; display: flex; gap: 5px; flex-wrap: wrap; max-width: calc(100% - 70px); }
+.pill.part { background: #6B4FBB; } .pill.not { background: #2C7A7B; }
+.fav { position: absolute; top: 8px; right: 8px; width: 40px; height: 40px; border-radius: 50%; border: 0; background: var(--surface); box-shadow: var(--shadow); cursor: pointer; font-size: 19px; color: var(--red); }
+.body { padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 0; }
+.price { font-family: var(--f-display); font-weight: 700; font-size: 23px; font-variant-numeric: tabular-nums; }
+.price s { font-family: var(--f-body); font-weight: 600; font-size: 14px; color: var(--ink-soft); margin-left: 6px; }
+.place { font-weight: 700; color: var(--ink-soft); font-size: 14px; }
+.title { font-size: 14px; overflow-wrap: anywhere; }
+.facts { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 14px; font-weight: 600; }
+.dpe { display: inline-block; min-width: 24px; text-align: center; border-radius: 6px; font-weight: 800; font-size: 12px; padding: 1px 5px; color: #fff; }
+.dpe-A { background: #009c6d; } .dpe-B { background: #52b153; } .dpe-C { background: #a5cc74; color: #1F2A44; }
+.dpe-D { background: #f4e70f; color: #1F2A44; } .dpe-E { background: #f0b40f; color: #1F2A44; } .dpe-F { background: #eb8235; } .dpe-G { background: #d7221f; }
+.foot { margin-top: auto; padding-top: 8px; font-size: 13px; color: var(--ink-soft); display: flex; flex-wrap: wrap; gap: 4px 10px; min-width: 0; }
+.foot > span { min-width: 0; overflow-wrap: anywhere; }
+.foot a { color: var(--ink); font-weight: 800; }
+.empty { text-align: center; color: var(--ink-soft); padding: 40px 0; }
+.more { display: flex; justify-content: center; margin-top: 16px; }
+
+/* annuaire et sites */
+details.panel > summary { cursor: pointer; list-style: none; display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: baseline; }
+details.panel > summary::-webkit-details-marker { display: none; }
+details.panel > summary::before { content: "▸"; font-size: 18px; color: var(--ink-soft); }
+details.panel[open] > summary::before { content: "▾"; }
+.panel-tools { display: flex; flex-wrap: wrap; gap: 8px; }
+.table-wrap { overflow-x: auto; border-top: 2px solid var(--surface-2); }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { text-align: left; padding: 8px 10px 8px 0; border-bottom: 2px solid var(--surface-2); vertical-align: top; }
+th { font-size: 12px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: .04em; }
+td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+td .sub { display: block; font-size: 12px; color: var(--ink-soft); }
+.tag { font-size: 12px; font-weight: 700; border-radius: 999px; padding: 1px 8px; background: var(--surface-2); white-space: nowrap; }
+.sites { display: grid; gap: 4px; margin: 0; padding-left: 18px; font-size: 14px; }
+.disclaimer { font-size: 12px; color: var(--ink-soft); margin-top: 24px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <svg viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="19" fill="#F5B800"/>
+        <path d="M4 26c5-3 9 3 16 0s11-3 16 0v4a16 16 0 0 1-32 0z" fill="#4FB3E8"/>
+        <path d="M10 25V16l10-8 10 8v9z" fill="#fff" stroke="#1F2A44" stroke-width="2" stroke-linejoin="round"/>
+        <rect x="17" y="18" width="6" height="7" fill="#E53935"/>
+      </svg>
+      <div style="min-width:0">
+        <h1>ISA <span>Immo</span></h1>
+        <p>Maisons à vendre et à louer · Argenton et 30 km alentour, Azerables et Liglet à 10 km</p>
+      </div>
+    </div>
+    <div class="maj-zone">
+      <span class="maj" id="maj"></span>
+      <button class="btn main" id="b-maj" hidden>Mettre à jour</button>
+    </div>
+    <p class="maj-etat" id="maj-etat" hidden></p>
+  </header>
+
+  <section class="recap" aria-labelledby="t-recap">
+    <div class="recap-head">
+      <h2 id="t-recap">Récapitulatif</h2>
+      <div class="controls">
+        <select id="periode" class="sel" aria-label="Période">
+          <option value="prec">Depuis la mise à jour précédente</option>
+          <option value="7">7 derniers jours</option>
+          <option value="30">30 derniers jours</option>
+        </select>
+        <button class="btn main" id="b-mail" aria-expanded="false" aria-controls="mail">Envoyer par e-mail</button>
+      </div>
+    </div>
+    <div class="stats" id="stats"></div>
+    <ul class="list" id="liste"></ul>
+    <form class="mail" id="mail" hidden>
+      <div class="mail-row">
+        <label for="email">À quelle adresse e-mail ?</label>
+        <input class="input" type="email" id="email" required placeholder="prenom.nom@exemple.fr" autocomplete="email">
+        <button class="btn main" type="submit">Préparer l'e-mail</button>
+      </div>
+      <div id="mail-pret" hidden>
+        <div class="mail-row">
+          <a class="btn main" id="l-mail" href="#">Ouvrir ma messagerie</a>
+          <button class="btn" type="button" id="b-copier">Copier le récapitulatif</button>
+          <span id="m-copie"></span>
+        </div>
+        <p class="note">Si votre messagerie ne s'ouvre pas, copiez le texte ci-dessous et collez-le dans un e-mail à <b id="m-dest"></b>.</p>
+        <textarea id="texte" readonly aria-label="Texte du récapitulatif"></textarea>
+      </div>
+    </form>
+  </section>
+
+  <div class="tabs" role="group" aria-label="Catégorie">
+    <button class="tab" data-type="vente" aria-pressed="true"><b>À vendre</b><span id="n-vente"></span></button>
+    <button class="tab" data-type="location" aria-pressed="false"><b>À louer</b><span id="n-location"></span></button>
+  </div>
+  <div class="chips" role="group" aria-label="Secteur" id="secteurs"></div>
+  <div class="filters">
+    <label>Prix max (€)<input class="input" type="number" id="f-prix" min="0" step="1000" placeholder="aucun"></label>
+    <label>Surface min (m²)<input class="input" type="number" id="f-surface" min="0" step="5" placeholder="aucune"></label>
+    <label>Terrain min (m²)<input class="input" type="number" id="f-terrain-min" min="0" step="100" placeholder="aucun" list="paliers"></label>
+    <label>Terrain max (m²)<input class="input" type="number" id="f-terrain-max" min="0" step="100" placeholder="aucun" list="paliers"></label>
+    <datalist id="paliers"><option value="500"><option value="1000"><option value="2000"><option value="5000"><option value="10000"><option value="20000"><option value="50000"></datalist>
+    <label>Chambres min<select class="sel" id="f-chambres"><option value="">toutes</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+    <div class="dpe-filtre" role="group" aria-labelledby="t-dpe">
+      <span id="t-dpe">DPE</span>
+      <div class="dpe-lettres" id="f-dpe">
+        <button type="button" class="dpe dpe-A" aria-pressed="false">A</button><button type="button" class="dpe dpe-B" aria-pressed="false">B</button><button type="button" class="dpe dpe-C" aria-pressed="false">C</button><button type="button" class="dpe dpe-D" aria-pressed="false">D</button><button type="button" class="dpe dpe-E" aria-pressed="false">E</button><button type="button" class="dpe dpe-F" aria-pressed="false">F</button><button type="button" class="dpe dpe-G" aria-pressed="false">G</button>
+      </div>
+      <label class="check"><input type="checkbox" id="f-dpe-inconnu" checked> avec DPE non indiqué</label>
+    </div>
+    <label>Commune<select class="sel" id="f-commune"><option value="">toutes</option></select></label>
+    <label>Vendeur<select class="sel" id="f-vendeur">
+      <option value="">tous</option>
+      <option value="agence">Agences</option>
+      <option value="mandataire">Mandataires (iad, SAFTI…)</option>
+      <option value="notaire">Notaires</option>
+      <option value="particulier">Particuliers</option>
+      <option value="inconnu">Non précisé</option>
+    </select></label>
+    <label>Agence ou conseiller<select class="sel" id="f-agence"><option value="">tous</option></select></label>
+    <label>Trier par<select class="sel" id="f-tri">
+      <option value="recent">Plus récentes</option>
+      <option value="prix">Prix croissant</option>
+      <option value="-prix">Prix décroissant</option>
+      <option value="m2">Prix au m²</option>
+      <option value="-terrain">Terrain le plus grand</option>
+      <option value="terrain">Terrain le plus petit</option>
+      <option value="km">Distance</option>
+    </select></label>
+    <label class="check"><input type="checkbox" id="f-fav"> Mes favoris</label>
+  </div>
+  <p class="count"><span id="compte"></span><button class="btn small" id="b-raz" type="button">Effacer les filtres</button></p>
+  <div class="grid" id="grille"></div>
+  <p class="empty" id="vide" hidden>Aucune maison ne correspond à ces critères.</p>
+  <div class="more"><button class="btn" id="b-plus" hidden>Afficher plus de maisons</button></div>
+
+  <details class="panel" id="annuaire" style="margin-top:24px">
+    <summary><h2>Agences et vendeurs du secteur</h2><span class="note" id="annuaire-resume"></span></summary>
+    <div class="panel-tools">
+      <input class="input" type="search" id="a-cherche" placeholder="Chercher une agence, une commune…" aria-label="Chercher dans l'annuaire">
+      <select class="sel" id="a-type" aria-label="Type de vendeur">
+        <option value="">tous les types</option><option value="agence">Agences</option>
+        <option value="mandataire">Mandataires</option><option value="notaire">Notaires</option>
+      </select>
+    </div>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Vendeur</th><th>Type</th><th>Annonces</th><th>Communes des biens</th><th>Coordonnées</th><th></th></tr></thead>
+      <tbody id="a-lignes"></tbody>
+    </table></div>
+    <p class="note">Liste établie à partir des annonces en ligne : chaque vendeur qui a au moins une maison à vendre ou à louer dans les secteurs y figure. Les coordonnées viennent de SeLoger et d'immobilier.notaires.fr quand ils les donnent.</p>
+  </details>
+
+  <details class="panel" id="sites">
+    <summary><h2>Sites consultés</h2><span class="note" id="sites-resume"></span></summary>
+    <div><b>Collectés</b> (le site autorise les robots sur ses pages d'annonces dans son fichier robots.txt et ne les bloque pas) :
+      <ul class="sites" id="s-ok"></ul></div>
+    <div><b>Non collectés</b> :<ul class="sites" id="s-non"></ul></div>
+  </details>
+
+  <p class="disclaimer">Un même bien publié sur plusieurs sites n'apparaît qu'une fois (même commune, même surface, même nombre de pièces) : la fiche donne alors tous les liens. Les offres de constructeurs (maisons à construire) sont ignorées. La surface du terrain vient de l'annonce ; elle manque quand le site ne l'indique pas. Vérifiez toujours l'annonce d'origine.</p>
+</div>
+
+<script>
+const D = /*__DONNEES__*/null;
+const PAR_PAGE = 60;
+const etat = { type: "vente", zone: "argenton", max: PAR_PAGE };
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const euros = (v, t) => v ? v.toLocaleString("fr-FR") + " €" + (t === "location" ? " /mois" : "") : "Prix non indiqué";
+const jour = iso => iso ? new Date(iso).toLocaleDateString("fr-FR", { day: "numeric", month: "long" }) : "";
+const m2 = v => v.toLocaleString("fr-FR") + " m²";
+const terrainTxt = v => v >= 10000 ? `${m2(v)} (${(v / 10000).toLocaleString("fr-FR", { maximumFractionDigits: 1 })} ha)` : m2(v);
+const LIB_CAT = { agence: "Agence", mandataire: "Mandataire", notaire: "Notaire", particulier: "Particulier", inconnu: "Non précisé" };
+const memo = {
+  lire(k, d) { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } },
+  ecrire(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
+};
+let favoris = new Set(memo.lire("favoris", []));
+const cle = a => a.sources[0].url;
+const dansZone = (a, z) => z === "tout" || a.zones.includes(z);
+const famille = z => z === "azerables" ? "z-aze" : z === "liglet" ? "z-lig" : z === "tout" ? "" : "z-arg";
+
+// Distance affichée : au centre du secteur choisi (Azerables, Liglet), sinon à Argenton.
+function distance(a) {
+  const c = D.centres[etat.zone] ? etat.zone : "argenton";
+  const d = a.dist ? a.dist[c] : a.km;
+  return { km: d, centre: D.centres[c] };
+}
+
+function depuis() {
+  const p = $("#periode").value;
+  if (p === "prec" && D.precedente) return D.precedente;
+  const j = p === "30" ? 30 : 7;
+  return new Date(Date.now() - j * 864e5).toISOString().slice(0, 19);
+}
+const estNouveau = (a, d) => a.vu >= d;
+const estBaisse = (a, d) => a.variation && a.variation.nouveau < a.variation.ancien && a.variation.date >= d;
+
+function recap() {
+  const d = depuis();
+  const nouv = D.annonces.filter(a => estNouveau(a, d));
+  const baisses = D.annonces.filter(a => !estNouveau(a, d) && estBaisse(a, d));
+  const ret = D.retirees.filter(r => r.vu >= d);
+  return { d, nouv, baisses, ret };
+}
+
+function afficherRecap() {
+  const r = recap(), n = t => r.nouv.filter(a => a.type === t).length;
+  $("#stats").innerHTML = `
+    <span class="stat"><b>${r.nouv.length}</b> nouvelle${r.nouv.length > 1 ? "s" : ""} · ${n("vente")} à vendre, ${n("location")} à louer</span>
+    <span class="stat"><b>${r.baisses.length}</b> baisse${r.baisses.length > 1 ? "s" : ""} de prix</span>
+    <span class="stat"><b>${r.ret.length}</b> retirée${r.ret.length > 1 ? "s" : ""}</span>
+    <span class="since">depuis le ${jour(r.d)}</span>`;
+  const ligne = (a, cls, lib) => `<li><span class="pill ${cls}">${lib}</span><span><b>${euros(a.prix, a.type)}</b>
+    ${a.type === "vente" ? "à vendre" : "à louer"} à ${esc(a.commune)}${a.surface ? " · " + a.surface + " m²" : ""}${a.terrain ? " · terrain " + terrainTxt(a.terrain) : ""} ·
+    <a href="${esc(a.sources[0].url)}" target="_blank" rel="noopener">${esc(a.titre || "voir l'annonce")}</a></span></li>`;
+  $("#liste").innerHTML = [...r.nouv.map(a => ligne(a, "new", "Nouveau")), ...r.baisses.map(a => ligne(a, "drop", "Baisse"))].join("")
+    || '<li><span class="note">Rien de nouveau sur cette période.</span></li>';
+}
+
+function filtrer() {
+  const prix = +$("#f-prix").value || 0, surf = +$("#f-surface").value || 0, ch = +$("#f-chambres").value || 0;
+  const tmin = +$("#f-terrain-min").value || 0, tmax = +$("#f-terrain-max").value || 0;
+  const com = $("#f-commune").value, fav = $("#f-fav").checked, vend = $("#f-vendeur").value, ag = $("#f-agence").value;
+  const dpe = [...document.querySelectorAll('#f-dpe [aria-pressed="true"]')].map(b => b.textContent);
+  const sansDpe = $("#f-dpe-inconnu").checked;
+  return D.annonces.filter(a => a.type === etat.type && dansZone(a, etat.zone)
+    && (a.dpe ? !dpe.length || dpe.includes(a.dpe) : sansDpe)
+    && (!prix || (a.prix && a.prix <= prix)) && (!surf || (a.surface && a.surface >= surf))
+    && (!tmin || (a.terrain && a.terrain >= tmin)) && (!tmax || (a.terrain && a.terrain <= tmax))
+    && (!ch || (a.chambres && a.chambres >= ch)) && (!com || a.commune === com) && (!fav || favoris.has(cle(a)))
+    && (!vend || a.categories.includes(vend)) && (!ag || a.vendeurs.some(v => v.nom === ag)));
+}
+
+function trier(l) {
+  const n = v => v ?? Infinity, pm2 = a => a.prix && a.surface ? a.prix / a.surface : null;
+  const f = { recent: (a, b) => b.vu.localeCompare(a.vu), prix: (a, b) => n(a.prix) - n(b.prix),
+    "-prix": (a, b) => (b.prix ?? -1) - (a.prix ?? -1), m2: (a, b) => n(pm2(a)) - n(pm2(b)),
+    "-terrain": (a, b) => (b.terrain ?? -1) - (a.terrain ?? -1), terrain: (a, b) => n(a.terrain) - n(b.terrain),
+    km: (a, b) => n(distance(a).km) - n(distance(b).km) };
+  return l.sort(f[$("#f-tri").value]);
+}
+
+function fiche(a, d) {
+  const v = a.variation, baisse = v && v.nouveau < v.ancien, dist = distance(a);
+  const facts = [a.surface && `${a.surface} m²`, a.pieces && `${a.pieces} pièce${a.pieces > 1 ? "s" : ""}`,
+    a.chambres && `${a.chambres} ch.`,
+    a.type === "vente" && a.prix && a.surface && `${Math.round(a.prix / a.surface).toLocaleString("fr-FR")} €/m²`].filter(Boolean);
+  const fav = favoris.has(cle(a));
+  const vendeurs = [...new Set(a.vendeurs.map(x => x.nom).filter(Boolean))];
+  return `<article class="card">
+    <div class="ph">
+      ${a.photo ? `<img src="${esc(a.photo)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : '<span class="none">Pas de photo</span>'}
+      <div class="badges">${estNouveau(a, d) ? '<span class="pill new">Nouveau</span>' : ""}${baisse ? `<span class="pill drop">−${Math.round((1 - v.nouveau / v.ancien) * 100)} %</span>` : ""}${a.particulier ? '<span class="pill part">Particulier</span>' : ""}${a.categories.includes("notaire") ? '<span class="pill not">Notaire</span>' : ""}</div>
+      <button class="fav" data-cle="${esc(cle(a))}" aria-pressed="${fav}" aria-label="${fav ? "Retirer des favoris" : "Ajouter aux favoris"}">${fav ? "♥" : "♡"}</button>
+    </div>
+    <div class="body">
+      <div class="price">${euros(a.prix, a.type)}${baisse ? `<s>${euros(v.ancien, a.type)}</s>` : ""}</div>
+      <div class="place">${esc(a.commune)}${dist.km != null && a.commune !== dist.centre ? ` · ${dist.km} km ${/^[AEIOUÉ]/.test(dist.centre) ? "d'" : "de "}${esc(dist.centre)}` : ""}</div>
+      <div class="zones">${a.zones.filter(z => D.zones[z]).map(z => `<span class="ztag ${famille(z)}">${esc(D.zones[z])}</span>`).join("")}</div>
+      <div class="title">${esc(a.titre)}</div>
+      <div class="facts">${facts.map(x => `<span>${esc(x)}</span>`).join("")}<span class="land">${a.terrain ? "terrain " + esc(terrainTxt(a.terrain)) : ""}</span>${a.dpe ? `<span class="dpe dpe-${esc(a.dpe)}" title="DPE ${esc(a.dpe)}">${esc(a.dpe)}</span>` : ""}</div>
+      <div class="foot"><span>${esc(vendeurs.join(" · "))}</span><span>Voir sur ${a.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.source)}</a>`).join(" · ")}</span></div>
+    </div>
+  </article>`;
+}
+
+function afficherSecteurs() {
+  const duType = D.annonces.filter(a => a.type === etat.type);
+  $("#secteurs").innerHTML = [...Object.entries(D.zones), ["tout", "Tout"]].map(([z, lib]) =>
+    `<button class="chip ${famille(z)}" data-zone="${z}" aria-pressed="${etat.zone === z}">${esc(lib)} <span class="n">${duType.filter(a => dansZone(a, z)).length}</span></button>`).join("");
+}
+
+function afficher() {
+  const nb = t => D.annonces.filter(a => a.type === t).length;
+  $("#n-vente").textContent = `${nb("vente")} maisons`;
+  $("#n-location").textContent = `${nb("location")} maison${nb("location") > 1 ? "s" : ""}`;
+  afficherSecteurs();
+  const l = trier(filtrer()), d = depuis();
+  $("#compte").textContent = `${l.length} maison${l.length > 1 ? "s" : ""}`;
+  $("#grille").innerHTML = l.slice(0, etat.max).map(a => fiche(a, d)).join("");
+  $("#vide").hidden = l.length > 0;
+  $("#b-plus").hidden = l.length <= etat.max;
+  $("#b-plus").textContent = `Afficher plus de maisons (${l.length - etat.max} de plus)`;
+}
+const rafraichir = () => { etat.max = PAR_PAGE; afficher(); };
+
+function afficherAnnuaire() {
+  const q = $("#a-cherche").value.trim().toLowerCase(), t = $("#a-type").value;
+  const l = D.annuaire.filter(v => (!t || v.categorie === t)
+    && (!q || [v.nom, v.contact, ...v.communes].join(" ").toLowerCase().includes(q)));
+  $("#a-lignes").innerHTML = l.map(v => `<tr>
+    <td><b>${esc(v.nom)}</b><span class="sub">${esc(v.sources.join(", "))}</span></td>
+    <td><span class="tag">${LIB_CAT[v.categorie]}</span></td>
+    <td class="num">${v.vente} vente${v.vente > 1 ? "s" : ""}${v.location ? `<span class="sub">${v.location} location${v.location > 1 ? "s" : ""}</span>` : ""}</td>
+    <td>${esc(v.communes.slice(0, 6).join(", "))}${v.communes.length > 6 ? ` <span class="sub">et ${v.communes.length - 6} autres</span>` : ""}</td>
+    <td>${esc(v.contact || "")}</td>
+    <td><button class="btn small" data-agence="${esc(v.nom)}">Ses annonces</button></td></tr>`).join("")
+    || '<tr><td colspan="6" class="note">Aucun vendeur ne correspond.</td></tr>';
+}
+
+function texteRecap() {
+  const r = recap(), lignes = [`ISA Immo – récapitulatif depuis le ${jour(r.d)}`, ""];
+  for (const [titre, liste] of [["Nouvelles annonces", r.nouv], ["Baisses de prix", r.baisses]]) {
+    lignes.push(`${titre} (${liste.length})`);
+    for (const t of ["vente", "location"]) {
+      const l = liste.filter(a => a.type === t);
+      if (!l.length) continue;
+      lignes.push(t === "vente" ? "À vendre :" : "À louer :");
+      l.forEach(a => lignes.push(`- ${euros(a.prix, a.type)} – ${a.commune}${a.surface ? " – " + a.surface + " m²" : ""}${a.pieces ? ", " + a.pieces + " p." : ""}${a.terrain ? ", terrain " + terrainTxt(a.terrain) : ""}`, `  ${a.titre || ""}`, `  ${a.sources[0].url}`));
+    }
+    lignes.push("");
+  }
+  return lignes.join("\n");
+}
+
+// Remplissages initiaux
+$("#maj").textContent = D.maj ? `Annonces du ${new Date(D.maj).toLocaleString("fr-FR", { dateStyle: "long", timeStyle: "short" })}` : "Aucune collecte pour l'instant";
+const communes = [...new Map(D.annonces.map(a => [a.commune, a.km])).entries()].sort((a, b) => a[0].localeCompare(b[0], "fr"));
+$("#f-commune").innerHTML += communes.map(([c, k]) => `<option value="${esc(c)}">${esc(c)} (${k} km d'Argenton)</option>`).join("");
+const noms = [...new Set(D.annonces.flatMap(a => a.vendeurs.map(v => v.nom)).filter(n => n && !/^particulier/i.test(n)))].sort((a, b) => a.localeCompare(b, "fr"));
+$("#f-agence").innerHTML += noms.map(n => `<option value="${esc(n)}">${esc(n)}</option>`).join("");
+if (!D.precedente) $("#periode").options[0].textContent = "7 derniers jours (première collecte)";
+$("#email").value = memo.lire("email", "");
+const parType = c => D.annuaire.filter(v => v.categorie === c).length;
+$("#annuaire-resume").textContent = `${parType("agence")} agences, ${parType("mandataire")} mandataires, ${parType("notaire")} notaires · ${D.particuliers} annonces de particuliers`;
+$("#sites-resume").textContent = `${D.sources.length} sites collectés, ${D.exclus.length} écartés`;
+$("#s-ok").innerHTML = D.sources.map(s => `<li><b>${esc(s.nom)}</b> : ${esc(s.contenu)}${s.bilan?.erreur ? ` <span class="msg-err">(en panne lors de la dernière collecte)</span>` : s.bilan && !s.bilan.lues ? ` <span class="msg-err">(rien obtenu lors de la dernière collecte : site bloqué ou vide)</span>` : s.bilan ?` <span class="note">· ${s.bilan.lues - s.bilan.hors_zone} annonces dans les secteurs</span>` : ""}</li>`).join("");
+$("#s-non").innerHTML = D.exclus.map(s => `<li><b>${esc(s.nom)}</b> : ${esc(s.raison)}</li>`).join("");
+
+document.querySelectorAll(".tab").forEach(b => b.onclick = () => {
+  document.querySelectorAll(".tab").forEach(x => x.setAttribute("aria-pressed", x === b)); etat.type = b.dataset.type; rafraichir();
+});
+$("#secteurs").addEventListener("click", e => {
+  const b = e.target.closest(".chip"); if (!b) return;
+  etat.zone = b.dataset.zone; rafraichir();
+});
+const FILTRES = ["#f-prix", "#f-surface", "#f-terrain-min", "#f-terrain-max", "#f-chambres", "#f-commune", "#f-vendeur", "#f-agence", "#f-tri", "#f-fav", "#f-dpe-inconnu"];
+FILTRES.forEach(s => $(s).addEventListener("input", rafraichir));
+$("#f-dpe").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  b.setAttribute("aria-pressed", b.getAttribute("aria-pressed") !== "true"); rafraichir();
+});
+$("#b-raz").onclick = () => {
+  FILTRES.forEach(s => { const x = $(s); x.type === "checkbox" ? x.checked = x.id === "f-dpe-inconnu" : x.value = x.id === "f-tri" ? "recent" : ""; });
+  document.querySelectorAll("#f-dpe button").forEach(b => b.setAttribute("aria-pressed", "false"));
+  rafraichir();
+};
+$("#b-plus").onclick = () => { etat.max += PAR_PAGE; afficher(); };
+$("#periode").onchange = () => { afficherRecap(); afficher(); $("#mail-pret").hidden = true; };
+$("#grille").addEventListener("click", e => {
+  const b = e.target.closest(".fav"); if (!b) return;
+  const k = b.dataset.cle; favoris.has(k) ? favoris.delete(k) : favoris.add(k);
+  memo.ecrire("favoris", [...favoris]); afficher();
+});
+["#a-cherche", "#a-type"].forEach(s => $(s).addEventListener("input", afficherAnnuaire));
+$("#a-lignes").addEventListener("click", e => {
+  const b = e.target.closest("[data-agence]"); if (!b) return;
+  const v = D.annuaire.find(x => x.nom === b.dataset.agence);
+  $("#f-agence").value = b.dataset.agence; etat.zone = "tout";
+  if (v && !v.vente && v.location) { etat.type = "location"; document.querySelectorAll(".tab").forEach(x => x.setAttribute("aria-pressed", x.dataset.type === "location")); }
+  rafraichir(); $("#secteurs").scrollIntoView({ behavior: "smooth" });
+});
+$("#b-mail").onclick = () => {
+  const f = $("#mail"); f.hidden = !f.hidden; $("#b-mail").setAttribute("aria-expanded", !f.hidden);
+  if (!f.hidden) $("#email").focus();
+};
+$("#mail").addEventListener("submit", e => {
+  e.preventDefault();
+  const email = $("#email").value.trim(); memo.ecrire("email", email);
+  const texte = texteRecap();
+  $("#texte").value = texte; $("#m-dest").textContent = email; $("#m-copie").textContent = "";
+  let corps = texte.length > 1800 ? texte.slice(0, 1800) + "\n… (suite dans l'application)" : texte;
+  $("#l-mail").href = `mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent("ISA Immo – récapitulatif")}&body=${encodeURIComponent(corps)}`;
+  $("#mail-pret").hidden = false;
+});
+$("#b-copier").onclick = () => {
+  navigator.clipboard.writeText($("#texte").value)
+    .then(() => { $("#m-copie").className = "msg-ok"; $("#m-copie").textContent = "Copié"; })
+    .catch(() => { $("#texte").select(); $("#m-copie").className = "note"; $("#m-copie").textContent = "Texte sélectionné : faites Ctrl+C."; });
+};
+
+/*__MAJ__*/
+
+afficherRecap();
+afficher();
+afficherAnnuaire();
+</script>

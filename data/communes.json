@@ -1,0 +1,1765 @@
+[
+ {
+  "nom": "Argenton-sur-Creuse",
+  "insee": "36006",
+  "lat": 46.58034,
+  "lon": 1.4995,
+  "distance_km": 0.3,
+  "distances": {
+   "argenton": 0.3,
+   "azerables": 25.4,
+   "liglet": 33.9
+  },
+  "zones": [
+   "argenton"
+  ],
+  "code_postal": "36200",
+  "bienici_zone": "-1030765"
+ },
+ {
+  "nom": "Saint-Marcel",
+  "insee": "36200",
+  "lat": 46.61137,
+  "lon": 1.51912,
+  "distance_km": 3.8,
+  "distances": {
+   "argenton": 3.8,
+   "azerables": 29.0,
+   "liglet": 36.3
+  },
+  "zones": [
+   "r10"
+  ],
+  "code_postal": "36200",
+  "bienici_zone": "-2144432"
+ },
+ {
+  "nom": "Celon",
+  "insee": "36033",
+  "lat": 46.5379,
+  "lon": 1.51769,
+  "distance_km": 5.0,
+  "distances": {
+   "argenton": 5.0,
+   "azerables": 20.9,
+   "liglet": 34.5
+  },
+  "zones": [
+   "r10"
+  ],
+  "code_postal": "36200",
+  "bienici_zone": "-410423"
+ },
+ {
+  "nom": "Le Pont-Chrétien-Chabenet",
+  "insee": "36161",
+  "lat": 46.62727,
+  "lon": 1.50051,
+  "distance_km": 5.2,
+  "distances": {
+   "argenton": 5.2,
+   "azerables": 30.6,
+   "liglet": 35.6
+  },
+  "zones": [
+   "r10"
+  ],
+  "code_postal": "36800",
+  "bienici_zone": "-2144437"
+ },
+ {
+  "nom": "Le Pêchereau",
+  "insee": "36154",
+  "lat": 46.58173,
+  "lon": 1.56981,
+  "distance_km": 5.6,
+  "distances": {
+   "argenton": 5.6,
+   "azerables": 26.6,
+   "liglet": 39.2
+  },
+  "zones": [
+   "r10"
+  ],
+  "code_postal": "36200",
+  "bienici_zone": "-1043308"
+ },
+ {
+  "nom": "Thenay",
+  "insee": "36220",
+  "lat": 46.59733,
+  "lon": 1.42647,
+  "distance_km": 5.6,
+  "distances": {
+   "argenton": 5.6,
+   "azerables": 27.3,
+   "liglet": 29.1
+  },
+  "zones": [
+   "r10"
+  ],
+  "code_postal": "36800",
+  "bienici_zone": "-1030144"
+ },
+ {
+  "nom": "Le Menoux",
+  "insee": "36117",
+  "lat": 46.55612,
+  "lon": 1.574,
+  "distance_km": 6.6,
+  "distances": {
+   "argenton": 6.6,
+   "azerables": 24.0,
+   "liglet": 39.0
+  },
+  "zones": [
+   "r10"
+  ],
+  "code_postal": "36200",
+  "bienici_zone": "-1043310"
+ },
+ {
+  "nom": "Ceaulmont",
+  "insee": "36032",
+  "lat": 46.53237,
+  "lon": 1.55652,
+  "distance_km": 7.1,
+  "distances": {
+   "argenton": 7.1,
+   "azerables": 21.1,
+   "liglet": 37.5
+  },
+  "zones": [
+   "r10"
+  ],
+  "code_postal": "36200",
+  "bienici_zone": "-1033684"
+ },
+ {
+  "nom": "Chasseneuil",
+  "insee": "36042",
+  "lat": 46.6545,
+  "lon": 1.4928,
+  "distance_km": 8.2,
+  "distances": {
+   "argenton": 8.2,
+   "azerables": 33.6,
+   "liglet": 36.3
+  },
+  "zones": [
+   "r10"
+  ],
+  "code_postal": "36800",
+  "bienici_zone": "-2144402"
+ },
+ {
+  "nom": "Vigoux",
+  "insee": "36239",
+  "lat": 46.50256,
+  "lon": 1.47699,
+  "distance_km": 8.8,
+  "distances": {
+   "argenton": 8.8,
+   "azerables": 16.6,
+   "liglet": 31.3
+  },
+  "zones": [
+   "r10"
+  ],
+  "code_postal": "36170",
+  "bienici_zone": "-123985"
+ },
+ {
+  "nom": "Tendu",
+  "insee": "36219",
+  "lat": 46.64651,
+  "lon": 1.5615,
+  "distance_km": 8.9,
+  "distances": {
+   "argenton": 8.9,
+   "azerables": 33.4,
+   "liglet": 40.7
+  },
+  "zones": [
+   "r10"
+  ],
+  "code_postal": "36200",
+  "bienici_zone": "-2144371"
+ },
+ {
+  "nom": "Chazelet",
+  "insee": "36049",
+  "lat": 46.51237,
+  "lon": 1.43211,
+  "distance_km": 9.0,
+  "distances": {
+   "argenton": 9.0,
+   "azerables": 17.9,
+   "liglet": 27.8
+  },
+  "zones": [
+   "r10"
+  ],
+  "code_postal": "36170",
+  "bienici_zone": "-1029657"
+ },
+ {
+  "nom": "Chavin",
+  "insee": "36048",
+  "lat": 46.55677,
+  "lon": 1.60922,
+  "distance_km": 9.1,
+  "distances": {
+   "argenton": 9.1,
+   "azerables": 25.1,
+   "liglet": 41.7
+  },
+  "zones": [
+   "r10"
+  ],
+  "code_postal": "36200",
+  "bienici_zone": "-124157"
+ },
+ {
+  "nom": "Saint-Gaultier",
+  "insee": "36192",
+  "lat": 46.64855,
+  "lon": 1.42849,
+  "distance_km": 9.1,
+  "distances": {
+   "argenton": 9.1,
+   "azerables": 33.0,
+   "liglet": 31.6
+  },
+  "zones": [
+   "r10"
+  ],
+  "code_postal": "36800",
+  "bienici_zone": "-2142706"
+ },
+ {
+  "nom": "Luzeret",
+  "insee": "36106",
+  "lat": 46.54643,
+  "lon": 1.38083,
+  "distance_km": 9.6,
+  "distances": {
+   "argenton": 9.6,
+   "azerables": 22.5,
+   "liglet": 24.3
+  },
+  "zones": [
+   "r10"
+  ],
+  "code_postal": "36800",
+  "bienici_zone": "-1030120"
+ },
+ {
+  "nom": "Badecon-le-Pin",
+  "insee": "36158",
+  "lat": 46.53095,
+  "lon": 1.59994,
+  "distance_km": 9.7,
+  "distances": {
+   "argenton": 9.7,
+   "azerables": 22.2,
+   "liglet": 40.8
+  },
+  "zones": [
+   "r10"
+  ],
+  "code_postal": "36200",
+  "bienici_zone": "-1043292"
+ },
+ {
+  "nom": "Rivarennes",
+  "insee": "36172",
+  "lat": 46.61992,
+  "lon": 1.38242,
+  "distance_km": 9.7,
+  "distances": {
+   "argenton": 9.7,
+   "azerables": 30.4,
+   "liglet": 27.0
+  },
+  "zones": [
+   "r10"
+  ],
+  "code_postal": "36800",
+  "bienici_zone": "-124155"
+ },
+ {
+  "nom": "Mosnay",
+  "insee": "36131",
+  "lat": 46.62707,
+  "lon": 1.62534,
+  "distance_km": 11.1,
+  "distances": {
+   "argenton": 11.1,
+   "azerables": 32.8,
+   "liglet": 44.6
+  },
+  "zones": [
+   "r20"
+  ],
+  "code_postal": "36200",
+  "bienici_zone": "-2144357"
+ },
+ {
+  "nom": "Saint-Civran",
+  "insee": "36187",
+  "lat": 46.4949,
+  "lon": 1.40602,
+  "distance_km": 11.8,
+  "distances": {
+   "argenton": 11.8,
+   "azerables": 16.5,
+   "liglet": 25.9
+  },
+  "zones": [
+   "r20"
+  ],
+  "code_postal": "36170",
+  "bienici_zone": "-1029656"
+ },
+ {
+  "nom": "Malicornay",
+  "insee": "36111",
+  "lat": 46.56686,
+  "lon": 1.64967,
+  "distance_km": 11.8,
+  "distances": {
+   "argenton": 11.8,
+   "azerables": 27.6,
+   "liglet": 44.9
+  },
+  "zones": [
+   "r20"
+  ],
+  "code_postal": "36340",
+  "bienici_zone": "-2067324"
+ },
+ {
+  "nom": "Bazaiges",
+  "insee": "36014",
+  "lat": 46.47578,
+  "lon": 1.52751,
+  "distance_km": 11.9,
+  "distances": {
+   "argenton": 11.9,
+   "azerables": 14.4,
+   "liglet": 35.3
+  },
+  "zones": [
+   "r20"
+  ],
+  "code_postal": "36270",
+  "bienici_zone": "-972319"
+ },
+ {
+  "nom": "Saint-Gilles",
+  "insee": "36196",
+  "lat": 46.47786,
+  "lon": 1.44928,
+  "distance_km": 12.0,
+  "distances": {
+   "argenton": 12.0,
+   "azerables": 13.9,
+   "liglet": 29.4
+  },
+  "zones": [
+   "r20"
+  ],
+  "code_postal": "36170",
+  "bienici_zone": "-2134781"
+ },
+ {
+  "nom": "Baraize",
+  "insee": "36012",
+  "lat": 46.4828,
+  "lon": 1.57249,
+  "distance_km": 12.4,
+  "distances": {
+   "argenton": 12.4,
+   "azerables": 16.5,
+   "liglet": 38.7
+  },
+  "zones": [
+   "r20"
+  ],
+  "code_postal": "36270",
+  "bienici_zone": "-972320"
+ },
+ {
+  "nom": "Sacierges-Saint-Martin",
+  "insee": "36177",
+  "lat": 46.50686,
+  "lon": 1.36953,
+  "distance_km": 12.7,
+  "distances": {
+   "argenton": 12.7,
+   "azerables": 18.7,
+   "liglet": 23.1
+  },
+  "zones": [
+   "r20"
+  ],
+  "code_postal": "36170",
+  "bienici_zone": "-1029652"
+ },
+ {
+  "nom": "Gargilesse-Dampierre",
+  "insee": "36081",
+  "lat": 46.50379,
+  "lon": 1.6241,
+  "distance_km": 13.0,
+  "distances": {
+   "argenton": 13.0,
+   "azerables": 20.6,
+   "liglet": 42.5
+  },
+  "zones": [
+   "r20"
+  ],
+  "code_postal": "36190",
+  "bienici_zone": "-1043302"
+ },
+ {
+  "nom": "Nuret-le-Ferron",
+  "insee": "36144",
+  "lat": 46.68897,
+  "lon": 1.42731,
+  "distance_km": 13.1,
+  "distances": {
+   "argenton": 13.1,
+   "azerables": 37.5,
+   "liglet": 34.0
+  },
+  "zones": [
+   "r20"
+  ],
+  "code_postal": "36800",
+  "bienici_zone": "-2142790"
+ },
+ {
+  "nom": "Chitray",
+  "insee": "36051",
+  "lat": 46.65414,
+  "lon": 1.35697,
+  "distance_km": 13.4,
+  "distances": {
+   "argenton": 13.4,
+   "azerables": 34.5,
+   "liglet": 27.4
+  },
+  "zones": [
+   "r20"
+  ],
+  "code_postal": "36800",
+  "bienici_zone": "-2139291"
+ },
+ {
+  "nom": "Maillet",
+  "insee": "36110",
+  "lat": 46.58164,
+  "lon": 1.67353,
+  "distance_km": 13.6,
+  "distances": {
+   "argenton": 13.6,
+   "azerables": 29.9,
+   "liglet": 47.0
+  },
+  "zones": [
+   "r20"
+  ],
+  "code_postal": "36340",
+  "bienici_zone": "-2067335"
+ },
+ {
+  "nom": "Pommiers",
+  "insee": "36160",
+  "lat": 46.52,
+  "lon": 1.65278,
+  "distance_km": 13.8,
+  "distances": {
+   "argenton": 13.8,
+   "azerables": 23.4,
+   "liglet": 44.7
+  },
+  "zones": [
+   "r20"
+  ],
+  "code_postal": "36190",
+  "bienici_zone": "-1769944"
+ },
+ {
+  "nom": "La Pérouille",
+  "insee": "36157",
+  "lat": 46.70966,
+  "lon": 1.51063,
+  "distance_km": 14.4,
+  "distances": {
+   "argenton": 14.4,
+   "azerables": 39.8,
+   "liglet": 40.5
+  },
+  "zones": [
+   "r20"
+  ],
+  "code_postal": "36350",
+  "bienici_zone": "-2142980"
+ },
+ {
+  "nom": "Oulches",
+  "insee": "36148",
+  "lat": 46.6019,
+  "lon": 1.30901,
+  "distance_km": 14.5,
+  "distances": {
+   "argenton": 14.5,
+   "azerables": 30.2,
+   "liglet": 21.1
+  },
+  "zones": [
+   "r20"
+  ],
+  "code_postal": "36800",
+  "bienici_zone": "-124158"
+ },
+ {
+  "nom": "Bouesse",
+  "insee": "36022",
+  "lat": 46.62694,
+  "lon": 1.68679,
+  "distance_km": 15.4,
+  "distances": {
+   "argenton": 15.4,
+   "azerables": 34.8,
+   "liglet": 49.1
+  },
+  "zones": [
+   "r20"
+  ],
+  "code_postal": "36200",
+  "bienici_zone": "-2143734"
+ },
+ {
+  "nom": "Parnac",
+  "insee": "36150",
+  "lat": 46.44277,
+  "lon": 1.46581,
+  "distance_km": 15.5,
+  "distances": {
+   "argenton": 15.5,
+   "azerables": 10.0,
+   "liglet": 31.3
+  },
+  "zones": [
+   "r20",
+   "azerables"
+  ],
+  "code_postal": "36170",
+  "bienici_zone": "-967629"
+ },
+ {
+  "nom": "Cuzion",
+  "insee": "36062",
+  "lat": 46.46609,
+  "lon": 1.61698,
+  "distance_km": 15.8,
+  "distances": {
+   "argenton": 15.8,
+   "azerables": 17.0,
+   "liglet": 42.3
+  },
+  "zones": [
+   "r20"
+  ],
+  "code_postal": "36190",
+  "bienici_zone": "-124074"
+ },
+ {
+  "nom": "Prissac",
+  "insee": "36168",
+  "lat": 46.51987,
+  "lon": 1.29986,
+  "distance_km": 16.5,
+  "distances": {
+   "argenton": 16.5,
+   "azerables": 22.6,
+   "liglet": 17.8
+  },
+  "zones": [
+   "r20"
+  ],
+  "code_postal": "36370",
+  "bienici_zone": "-1028144"
+ },
+ {
+  "nom": "Roussines",
+  "insee": "36174",
+  "lat": 46.45822,
+  "lon": 1.36956,
+  "distance_km": 16.7,
+  "distances": {
+   "argenton": 16.7,
+   "azerables": 13.9,
+   "liglet": 23.7
+  },
+  "zones": [
+   "r20"
+  ],
+  "code_postal": "36170",
+  "bienici_zone": "-123982"
+ },
+ {
+  "nom": "Saint-Benoît-du-Sault",
+  "insee": "36182",
+  "lat": 46.44652,
+  "lon": 1.39859,
+  "distance_km": 16.7,
+  "distances": {
+   "argenton": 16.7,
+   "azerables": 11.7,
+   "liglet": 26.2
+  },
+  "zones": [
+   "r20"
+  ],
+  "code_postal": "36170",
+  "bienici_zone": "-959434"
+ },
+ {
+  "nom": "Velles",
+  "insee": "36231",
+  "lat": 46.69665,
+  "lon": 1.64468,
+  "distance_km": 17.2,
+  "distances": {
+   "argenton": 17.2,
+   "azerables": 40.5,
+   "liglet": 48.8
+  },
+  "zones": [
+   "r20"
+  ],
+  "code_postal": "36330",
+  "bienici_zone": "-2143765"
+ },
+ {
+  "nom": "Éguzon-Chantôme",
+  "insee": "36070",
+  "lat": 46.4337,
+  "lon": 1.56792,
+  "distance_km": 17.3,
+  "distances": {
+   "argenton": 17.3,
+   "azerables": 11.8,
+   "liglet": 39.2
+  },
+  "zones": [
+   "r20"
+  ],
+  "code_postal": "36270",
+  "bienici_zone": "-124007"
+ },
+ {
+  "nom": "Luant",
+  "insee": "36101",
+  "lat": 46.72979,
+  "lon": 1.55999,
+  "distance_km": 17.3,
+  "distances": {
+   "argenton": 17.3,
+   "azerables": 42.5,
+   "liglet": 44.9
+  },
+  "zones": [
+   "r20"
+  ],
+  "code_postal": "36350",
+  "bienici_zone": "-1770668"
+ },
+ {
+  "nom": "Gournay",
+  "insee": "36084",
+  "lat": 46.59459,
+  "lon": 1.73522,
+  "distance_km": 18.3,
+  "distances": {
+   "argenton": 18.3,
+   "azerables": 33.8,
+   "liglet": 51.9
+  },
+  "zones": [
+   "r20"
+  ],
+  "code_postal": "36230",
+  "bienici_zone": "-124188"
+ },
+ {
+  "nom": "Ciron",
+  "insee": "36053",
+  "lat": 46.63361,
+  "lon": 1.26423,
+  "distance_km": 18.7,
+  "distances": {
+   "argenton": 18.7,
+   "azerables": 34.9,
+   "liglet": 20.4
+  },
+  "zones": [
+   "r20"
+  ],
+  "code_postal": "36300",
+  "bienici_zone": "-966308"
+ },
+ {
+  "nom": "Orsennes",
+  "insee": "36146",
+  "lat": 46.48052,
+  "lon": 1.69501,
+  "distance_km": 18.9,
+  "distances": {
+   "argenton": 18.9,
+   "azerables": 22.5,
+   "liglet": 48.1
+  },
+  "zones": [
+   "r20"
+  ],
+  "code_postal": "36190",
+  "bienici_zone": "-2141205"
+ },
+ {
+  "nom": "Méobecq",
+  "insee": "36118",
+  "lat": 46.74444,
+  "lon": 1.41567,
+  "distance_km": 19.2,
+  "distances": {
+   "argenton": 19.2,
+   "azerables": 43.7,
+   "liglet": 37.3
+  },
+  "zones": [
+   "r20"
+  ],
+  "code_postal": "36500",
+  "bienici_zone": "-2142765"
+ },
+ {
+  "nom": "Cluis",
+  "insee": "36056",
+  "lat": 46.53434,
+  "lon": 1.74532,
+  "distance_km": 19.7,
+  "distances": {
+   "argenton": 19.7,
+   "azerables": 29.3,
+   "liglet": 51.9
+  },
+  "zones": [
+   "r20"
+  ],
+  "code_postal": "36340",
+  "bienici_zone": "-2133713"
+ },
+ {
+  "nom": "Arthon",
+  "insee": "36009",
+  "lat": 46.68209,
+  "lon": 1.71113,
+  "distance_km": 19.9,
+  "distances": {
+   "argenton": 19.9,
+   "azerables": 41.1,
+   "liglet": 52.8
+  },
+  "zones": [
+   "r20"
+  ],
+  "code_postal": "36330",
+  "bienici_zone": "-1746809"
+ },
+ {
+  "nom": "Dunet",
+  "insee": "36067",
+  "lat": 46.46997,
+  "lon": 1.28824,
+  "distance_km": 20.1,
+  "distances": {
+   "argenton": 20.1,
+   "azerables": 18.9,
+   "liglet": 17.4
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "36310",
+  "bienici_zone": "-1028321"
+ },
+ {
+  "nom": "Neuillay-les-Bois",
+  "insee": "36139",
+  "lat": 46.76189,
+  "lon": 1.47244,
+  "distance_km": 20.2,
+  "distances": {
+   "argenton": 20.2,
+   "azerables": 45.5,
+   "liglet": 41.8
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "36500",
+  "bienici_zone": "-2133254"
+ },
+ {
+  "nom": "Saint-Plantaire",
+  "insee": "36207",
+  "lat": 46.42973,
+  "lon": 1.64405,
+  "distance_km": 20.3,
+  "distances": {
+   "argenton": 20.3,
+   "azerables": 16.0,
+   "liglet": 45.0
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "36190",
+  "bienici_zone": "-973194"
+ },
+ {
+  "nom": "Buxières-d'Aillac",
+  "insee": "36030",
+  "lat": 46.63861,
+  "lon": 1.75132,
+  "distance_km": 20.5,
+  "distances": {
+   "argenton": 20.5,
+   "azerables": 38.5,
+   "liglet": 54.2
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "36230",
+  "bienici_zone": "-2066400"
+ },
+ {
+  "nom": "La Châtre-Langlin",
+  "insee": "36047",
+  "lat": 46.4097,
+  "lon": 1.39029,
+  "distance_km": 20.7,
+  "distances": {
+   "argenton": 20.7,
+   "azerables": 8.7,
+   "liglet": 27.0
+  },
+  "zones": [
+   "r30",
+   "azerables"
+  ],
+  "code_postal": "36170",
+  "bienici_zone": "-966409"
+ },
+ {
+  "nom": "Saint-Sébastien",
+  "insee": "23239",
+  "lat": 46.39384,
+  "lon": 1.5324,
+  "distance_km": 21.0,
+  "distances": {
+   "argenton": 21.0,
+   "azerables": 6.7,
+   "liglet": 37.8
+  },
+  "zones": [
+   "r30",
+   "azerables"
+  ],
+  "code_postal": "23160",
+  "bienici_zone": "-120474"
+ },
+ {
+  "nom": "Mouhers",
+  "insee": "36133",
+  "lat": 46.56378,
+  "lon": 1.77575,
+  "distance_km": 21.5,
+  "distances": {
+   "argenton": 21.5,
+   "azerables": 33.3,
+   "liglet": 54.5
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "36340",
+  "bienici_zone": "-2135790"
+ },
+ {
+  "nom": "Chalais",
+  "insee": "36036",
+  "lat": 46.53739,
+  "lon": 1.22025,
+  "distance_km": 21.6,
+  "distances": {
+   "argenton": 21.6,
+   "azerables": 27.9,
+   "liglet": 12.1
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "36370",
+  "bienici_zone": "-1028138"
+ },
+ {
+  "nom": "Migné",
+  "insee": "36124",
+  "lat": 46.71858,
+  "lon": 1.28929,
+  "distance_km": 22.0,
+  "distances": {
+   "argenton": 22.0,
+   "azerables": 42.9,
+   "liglet": 28.8
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "36800",
+  "bienici_zone": "-1838986"
+ },
+ {
+  "nom": "Mouhet",
+  "insee": "36134",
+  "lat": 46.38576,
+  "lon": 1.43941,
+  "distance_km": 22.1,
+  "distances": {
+   "argenton": 22.1,
+   "azerables": 4.2,
+   "liglet": 31.5
+  },
+  "zones": [
+   "r30",
+   "azerables"
+  ],
+  "code_postal": "36170",
+  "bienici_zone": "-966431"
+ },
+ {
+  "nom": "Montchevrier",
+  "insee": "36126",
+  "lat": 46.48136,
+  "lon": 1.75068,
+  "distance_km": 22.4,
+  "distances": {
+   "argenton": 22.4,
+   "azerables": 26.0,
+   "liglet": 52.3
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "36140",
+  "bienici_zone": "-2141240"
+ },
+ {
+  "nom": "Chaillac",
+  "insee": "36035",
+  "lat": 46.4285,
+  "lon": 1.29218,
+  "distance_km": 23.0,
+  "distances": {
+   "argenton": 23.0,
+   "azerables": 15.9,
+   "liglet": 19.3
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "36310",
+  "bienici_zone": "-957773"
+ },
+ {
+  "nom": "Neuvy-Saint-Sépulchre",
+  "insee": "36141",
+  "lat": 46.59523,
+  "lon": 1.80619,
+  "distance_km": 23.8,
+  "distances": {
+   "argenton": 23.8,
+   "azerables": 37.4,
+   "liglet": 57.2
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "36230",
+  "bienici_zone": "-2134785"
+ },
+ {
+  "nom": "Crozant",
+  "insee": "23070",
+  "lat": 46.38269,
+  "lon": 1.61826,
+  "distance_km": 23.9,
+  "distances": {
+   "argenton": 23.9,
+   "azerables": 12.0,
+   "liglet": 44.4
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "23160",
+  "bienici_zone": "-118563"
+ },
+ {
+  "nom": "Ruffec",
+  "insee": "36176",
+  "lat": 46.62291,
+  "lon": 1.1833,
+  "distance_km": 24.3,
+  "distances": {
+   "argenton": 24.3,
+   "azerables": 37.1,
+   "liglet": 15.5
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "36300",
+  "bienici_zone": "-1027545"
+ },
+ {
+  "nom": "Bélâbre",
+  "insee": "36016",
+  "lat": 46.56015,
+  "lon": 1.17124,
+  "distance_km": 24.9,
+  "distances": {
+   "argenton": 24.9,
+   "azerables": 32.3,
+   "liglet": 9.7
+  },
+  "zones": [
+   "r30",
+   "liglet"
+  ],
+  "code_postal": "36370",
+  "bienici_zone": "-1028027"
+ },
+ {
+  "nom": "Jeu-les-Bois",
+  "insee": "36089",
+  "lat": 46.67526,
+  "lon": 1.79121,
+  "distance_km": 24.9,
+  "distances": {
+   "argenton": 24.9,
+   "azerables": 43.5,
+   "liglet": 58.3
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "36120",
+  "bienici_zone": "-124195"
+ },
+ {
+  "nom": "Lignac",
+  "insee": "36094",
+  "lat": 46.47466,
+  "lon": 1.20863,
+  "distance_km": 25.0,
+  "distances": {
+   "argenton": 25.0,
+   "azerables": 24.0,
+   "liglet": 11.4
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "36370",
+  "bienici_zone": "-958846"
+ },
+ {
+  "nom": "Lourdoueix-Saint-Michel",
+  "insee": "36099",
+  "lat": 46.41647,
+  "lon": 1.71952,
+  "distance_km": 25.0,
+  "distances": {
+   "argenton": 25.0,
+   "azerables": 20.6,
+   "liglet": 50.9
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "36140",
+  "bienici_zone": "-2139946"
+ },
+ {
+  "nom": "Niherne",
+  "insee": "36142",
+  "lat": 46.8031,
+  "lon": 1.55534,
+  "distance_km": 25.1,
+  "distances": {
+   "argenton": 25.1,
+   "azerables": 50.5,
+   "liglet": 49.5
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "36250",
+  "bienici_zone": "-2134754"
+ },
+ {
+  "nom": "Vendœuvres",
+  "insee": "36232",
+  "lat": 46.78836,
+  "lon": 1.36832,
+  "distance_km": 25.1,
+  "distances": {
+   "argenton": 25.1,
+   "azerables": 49.0,
+   "liglet": 38.6
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "36500",
+  "bienici_zone": "-1769922"
+ },
+ {
+  "nom": "Lys-Saint-Georges",
+  "insee": "36108",
+  "lat": 46.64372,
+  "lon": 1.81268,
+  "distance_km": 25.2,
+  "distances": {
+   "argenton": 25.2,
+   "azerables": 41.7,
+   "liglet": 58.8
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "36230",
+  "bienici_zone": "-2133717"
+ },
+ {
+  "nom": "La Buxerette",
+  "insee": "36028",
+  "lat": 46.495,
+  "lon": 1.80176,
+  "distance_km": 25.3,
+  "distances": {
+   "argenton": 25.3,
+   "azerables": 30.1,
+   "liglet": 56.2
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "36140",
+  "bienici_zone": "-2141255"
+ },
+ {
+  "nom": "Azerables",
+  "insee": "23015",
+  "lat": 46.35125,
+  "lon": 1.47447,
+  "distance_km": 25.6,
+  "distances": {
+   "argenton": 25.6,
+   "azerables": 0.6,
+   "liglet": 35.7
+  },
+  "zones": [
+   "r30",
+   "azerables"
+  ],
+  "code_postal": "23160",
+  "bienici_zone": "-118140"
+ },
+ {
+  "nom": "La Chapelle-Baloue",
+  "insee": "23050",
+  "lat": 46.35652,
+  "lon": 1.57013,
+  "distance_km": 25.6,
+  "distances": {
+   "argenton": 25.6,
+   "azerables": 7.9,
+   "liglet": 42.0
+  },
+  "zones": [
+   "r30",
+   "azerables"
+  ],
+  "code_postal": "23160",
+  "bienici_zone": "-118781"
+ },
+ {
+  "nom": "Bazelat",
+  "insee": "23018",
+  "lat": 46.34821,
+  "lon": 1.5289,
+  "distance_km": 26.0,
+  "distances": {
+   "argenton": 26.0,
+   "azerables": 4.7,
+   "liglet": 39.5
+  },
+  "zones": [
+   "r30",
+   "azerables"
+  ],
+  "code_postal": "23160",
+  "bienici_zone": "-180978"
+ },
+ {
+  "nom": "Rosnay",
+  "insee": "36173",
+  "lat": 46.71245,
+  "lon": 1.21143,
+  "distance_km": 26.2,
+  "distances": {
+   "argenton": 26.2,
+   "azerables": 44.5,
+   "liglet": 25.2
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "36300",
+  "bienici_zone": "-1902950"
+ },
+ {
+  "nom": "Beaulieu",
+  "insee": "36015",
+  "lat": 46.38647,
+  "lon": 1.30197,
+  "distance_km": 26.2,
+  "distances": {
+   "argenton": 26.2,
+   "azerables": 13.2,
+   "liglet": 22.5
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "36310",
+  "bienici_zone": "-123848"
+ },
+ {
+  "nom": "Les Grands-Chézeaux",
+  "insee": "87074",
+  "lat": 46.35528,
+  "lon": 1.38322,
+  "distance_km": 26.5,
+  "distances": {
+   "argenton": 26.5,
+   "azerables": 6.5,
+   "liglet": 29.5
+  },
+  "zones": [
+   "r30",
+   "azerables"
+  ],
+  "code_postal": "87160",
+  "bienici_zone": "-903620"
+ },
+ {
+  "nom": "Saint-Georges-les-Landes",
+  "insee": "87145",
+  "lat": 46.36106,
+  "lon": 1.34947,
+  "distance_km": 26.9,
+  "distances": {
+   "argenton": 26.9,
+   "azerables": 9.1,
+   "liglet": 27.1
+  },
+  "zones": [
+   "r30",
+   "azerables"
+  ],
+  "code_postal": "87160",
+  "bienici_zone": "-2134867"
+ },
+ {
+  "nom": "Saint-Maur",
+  "insee": "36202",
+  "lat": 46.80633,
+  "lon": 1.62777,
+  "distance_km": 27.0,
+  "distances": {
+   "argenton": 27.0,
+   "azerables": 51.9,
+   "liglet": 54.0
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "36250",
+  "bienici_zone": "-5812434"
+ },
+ {
+  "nom": "Saint-Denis-de-Jouhet",
+  "insee": "36189",
+  "lat": 46.52429,
+  "lon": 1.84094,
+  "distance_km": 27.1,
+  "distances": {
+   "argenton": 27.1,
+   "azerables": 34.4,
+   "liglet": 59.1
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "36230",
+  "bienici_zone": "-124211"
+ },
+ {
+  "nom": "Le Poinçonnet",
+  "insee": "36159",
+  "lat": 46.76405,
+  "lon": 1.73124,
+  "distance_km": 27.2,
+  "distances": {
+   "argenton": 27.2,
+   "azerables": 49.9,
+   "liglet": 58.0
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "36330",
+  "bienici_zone": "-1746792"
+ },
+ {
+  "nom": "Tranzault",
+  "insee": "36226",
+  "lat": 46.6227,
+  "lon": 1.84839,
+  "distance_km": 27.3,
+  "distances": {
+   "argenton": 27.3,
+   "azerables": 41.8,
+   "liglet": 61.0
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "36230",
+  "bienici_zone": "-2134797"
+ },
+ {
+  "nom": "Fresselines",
+  "insee": "23087",
+  "lat": 46.37659,
+  "lon": 1.70066,
+  "distance_km": 27.6,
+  "distances": {
+   "argenton": 27.6,
+   "azerables": 18.1,
+   "liglet": 50.6
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "23450",
+  "bienici_zone": "-118624"
+ },
+ {
+  "nom": "Méasnes",
+  "insee": "23130",
+  "lat": 46.42411,
+  "lon": 1.77587,
+  "distance_km": 27.6,
+  "distances": {
+   "argenton": 27.6,
+   "azerables": 24.9,
+   "liglet": 55.0
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "23360",
+  "bienici_zone": "-119329"
+ },
+ {
+  "nom": "Cromac",
+  "insee": "87053",
+  "lat": 46.36455,
+  "lon": 1.31088,
+  "distance_km": 27.9,
+  "distances": {
+   "argenton": 27.9,
+   "azerables": 12.1,
+   "liglet": 24.5
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "87160",
+  "bienici_zone": "-2134864"
+ },
+ {
+  "nom": "La Chapelle-Orthemale",
+  "insee": "36040",
+  "lat": 46.8333,
+  "lon": 1.45159,
+  "distance_km": 28.3,
+  "distances": {
+   "argenton": 28.3,
+   "azerables": 53.4,
+   "liglet": 46.5
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "36500",
+  "bienici_zone": "-2132595"
+ },
+ {
+  "nom": "Lafat",
+  "insee": "23103",
+  "lat": 46.33841,
+  "lon": 1.60777,
+  "distance_km": 28.3,
+  "distances": {
+   "argenton": 28.3,
+   "azerables": 10.9,
+   "liglet": 45.5
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "23800",
+  "bienici_zone": "-118816"
+ },
+ {
+  "nom": "Fougerolles",
+  "insee": "36078",
+  "lat": 46.56928,
+  "lon": 1.86657,
+  "distance_km": 28.4,
+  "distances": {
+   "argenton": 28.4,
+   "azerables": 38.9,
+   "liglet": 61.4
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "36230",
+  "bienici_zone": "-2067337"
+ },
+ {
+  "nom": "Nouzerolles",
+  "insee": "23147",
+  "lat": 46.38168,
+  "lon": 1.739,
+  "distance_km": 28.9,
+  "distances": {
+   "argenton": 28.9,
+   "azerables": 21.1,
+   "liglet": 53.3
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "23360",
+  "bienici_zone": "-119404"
+ },
+ {
+  "nom": "Châteauroux",
+  "insee": "36044",
+  "lat": 46.8048,
+  "lon": 1.69306,
+  "distance_km": 29.1,
+  "distances": {
+   "argenton": 29.1,
+   "azerables": 53.1,
+   "liglet": 58.0
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "36000",
+  "bienici_zone": "-1536593"
+ },
+ {
+  "nom": "Villedieu-sur-Indre",
+  "insee": "36241",
+  "lat": 46.84405,
+  "lon": 1.50943,
+  "distance_km": 29.3,
+  "distances": {
+   "argenton": 29.3,
+   "azerables": 54.7,
+   "liglet": 50.2
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "36320",
+  "bienici_zone": "-2134715"
+ },
+ {
+  "nom": "Maison-Feyne",
+  "insee": "23117",
+  "lat": 46.34576,
+  "lon": 1.66937,
+  "distance_km": 29.3,
+  "distances": {
+   "argenton": 29.3,
+   "azerables": 15.5,
+   "liglet": 49.5
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "23800",
+  "bienici_zone": "-119305"
+ },
+ {
+  "nom": "Tilly",
+  "insee": "36223",
+  "lat": 46.40279,
+  "lon": 1.21124,
+  "distance_km": 29.4,
+  "distances": {
+   "argenton": 29.4,
+   "azerables": 20.4,
+   "liglet": 16.1
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "36310",
+  "bienici_zone": "-957748"
+ },
+ {
+  "nom": "Bonneuil",
+  "insee": "36020",
+  "lat": 46.38109,
+  "lon": 1.23843,
+  "distance_km": 29.7,
+  "distances": {
+   "argenton": 29.7,
+   "azerables": 17.9,
+   "liglet": 19.3
+  },
+  "zones": [
+   "r30"
+  ],
+  "code_postal": "36310",
+  "bienici_zone": "-124083"
+ },
+ {
+  "nom": "Saint-Germain-Beaupré",
+  "insee": "23199",
+  "lat": 46.31495,
+  "lon": 1.55693,
+  "distance_km": 29.9,
+  "distances": {
+   "argenton": 29.9,
+   "azerables": 8.1,
+   "liglet": 43.2
+  },
+  "zones": [
+   "r30",
+   "azerables"
+  ],
+  "code_postal": "23160",
+  "bienici_zone": "-120309"
+ },
+ {
+  "nom": "Mauvières",
+  "insee": "36114",
+  "lat": 46.57215,
+  "lon": 1.1041,
+  "distance_km": 30.0,
+  "distances": {
+   "argenton": 30.0,
+   "azerables": 37.0,
+   "liglet": 7.6
+  },
+  "zones": [
+   "r30",
+   "liglet"
+  ],
+  "code_postal": "36370",
+  "bienici_zone": "-1027535"
+ },
+ {
+  "nom": "Saint-Sulpice-les-Feuilles",
+  "insee": "87182",
+  "lat": 46.31531,
+  "lon": 1.39565,
+  "distance_km": 30.5,
+  "distances": {
+   "argenton": 30.5,
+   "azerables": 6.9,
+   "liglet": 33.0
+  },
+  "zones": [
+   "azerables"
+  ],
+  "code_postal": "87160",
+  "bienici_zone": "-117225"
+ },
+ {
+  "nom": "Vareilles",
+  "insee": "23258",
+  "lat": 46.30111,
+  "lon": 1.44885,
+  "distance_km": 31.3,
+  "distances": {
+   "argenton": 31.3,
+   "azerables": 6.0,
+   "liglet": 37.2
+  },
+  "zones": [
+   "azerables"
+  ],
+  "code_postal": "23300",
+  "bienici_zone": "-120518"
+ },
+ {
+  "nom": "Saint-Hilaire-sur-Benaize",
+  "insee": "36197",
+  "lat": 46.55734,
+  "lon": 1.06946,
+  "distance_km": 32.7,
+  "distances": {
+   "argenton": 32.7,
+   "azerables": 38.0,
+   "liglet": 5.4
+  },
+  "zones": [
+   "liglet"
+  ],
+  "code_postal": "36370",
+  "bienici_zone": "-1027441"
+ },
+ {
+  "nom": "Liglet",
+  "insee": "86132",
+  "lat": 46.50466,
+  "lon": 1.07998,
+  "distance_km": 32.9,
+  "distances": {
+   "argenton": 32.9,
+   "azerables": 34.2,
+   "liglet": 1.0
+  },
+  "zones": [
+   "liglet"
+  ],
+  "code_postal": "86290",
+  "bienici_zone": "-139347"
+ },
+ {
+  "nom": "Thollet",
+  "insee": "86270",
+  "lat": 46.43162,
+  "lon": 1.11802,
+  "distance_km": 33.3,
+  "distances": {
+   "argenton": 33.3,
+   "azerables": 28.2,
+   "liglet": 9.4
+  },
+  "zones": [
+   "liglet"
+  ],
+  "code_postal": "86290",
+  "bienici_zone": "-144923"
+ },
+ {
+  "nom": "Saint-Agnant-de-Versillat",
+  "insee": "23177",
+  "lat": 46.27932,
+  "lon": 1.50812,
+  "distance_km": 33.5,
+  "distances": {
+   "argenton": 33.5,
+   "azerables": 8.8,
+   "liglet": 42.3
+  },
+  "zones": [
+   "azerables"
+  ],
+  "code_postal": "23300",
+  "bienici_zone": "-120279"
+ },
+ {
+  "nom": "La Trimouille",
+  "insee": "86273",
+  "lat": 46.44439,
+  "lon": 1.06246,
+  "distance_km": 36.5,
+  "distances": {
+   "argenton": 36.5,
+   "azerables": 32.7,
+   "liglet": 7.1
+  },
+  "zones": [
+   "liglet"
+  ],
+  "code_postal": "86290",
+  "bienici_zone": "-139308"
+ },
+ {
+  "nom": "Béthines",
+  "insee": "86025",
+  "lat": 46.54686,
+  "lon": 0.97223,
+  "distance_km": 40.2,
+  "distances": {
+   "argenton": 40.2,
+   "azerables": 43.6,
+   "liglet": 8.5
+  },
+  "zones": [
+   "liglet"
+  ],
+  "code_postal": "86310",
+  "bienici_zone": "-133957"
+ },
+ {
+  "nom": "Journet",
+  "insee": "86118",
+  "lat": 46.47155,
+  "lon": 0.97361,
+  "distance_km": 41.8,
+  "distances": {
+   "argenton": 41.8,
+   "azerables": 40.1,
+   "liglet": 8.3
+  },
+  "zones": [
+   "liglet"
+  ],
+  "code_postal": "86290",
+  "bienici_zone": "-139206"
+ }
+]

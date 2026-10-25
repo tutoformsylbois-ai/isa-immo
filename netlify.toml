@@ -1,0 +1,5 @@
+# La page est déjà fabriquée par GitHub (site/index.html) : Netlify la met simplement en ligne.
+[build]
+  command = "echo Page déjà prête"
+  publish = "site"
+  functions = "netlify/functions"
