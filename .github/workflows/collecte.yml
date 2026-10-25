@@ -1,0 +1,37 @@
+# Collecte les annonces chaque matin (et à la demande, via le bouton « Mettre à jour » de la page),
+# puis enregistre la base et la page : Netlify remet alors le site en ligne tout seul.
+name: Collecte des annonces
+
+on:
+  schedule:
+    - cron: "0 5 * * *"   # 5 h UTC = 6 h ou 7 h à Paris
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collecte
+  cancel-in-progress: false
+
+jobs:
+  collecte:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      TZ: Europe/Paris
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python collecte.py
+      - run: python exporter_page.py --netlify
+      - name: Enregistrer les annonces
+        run: |
+          git config user.name "collecte-automatique"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/annonces.db data/agences_bienici.json site/index.html
+          git commit -m "Collecte du $(date '+%d/%m/%Y %H:%M')" || echo "Rien de nouveau"
+          git push
